@@ -1,0 +1,16 @@
+{
+  "data": {
+    "name": "Zahid Hussain",
+    "title": "Full Stack Developer",
+    "description": "I am a passionate Full Stack Developer with experience in building scalable web applications. I love creating modern, responsive, and user-friendly interfaces.",
+    "expertise": [
+      "Laravel",
+      "Vue.js",
+      "Node.js",
+      "MySQL",
+      "HTML5, CSS3, JavaScript",
+      "REST APIs & GraphQL"
+    ],
+    "profileImage": "https://via.placeholder.com/150?text=Zahid+Hussain"
+  }
+}
