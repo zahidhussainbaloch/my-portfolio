@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/zahid",
+      "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg"
+    },
+    {
+      "platform": "GitHub",
+      "url": "https://github.com/zahid",
+      "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg"
+    },
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/zahid",
+      "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg"
+    },
+    {
+      "platform": "Facebook",
+      "url": "https://facebook.com/zahid",
+      "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg"
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://instagram.com/zahid",
+      "icon": "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg"
+    }
+  ]
+}
