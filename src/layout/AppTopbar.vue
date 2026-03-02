@@ -118,7 +118,7 @@ const isOutsideClicked = (event) => {
                     class="profile-dropdown"
                 >
                     <router-link
-                        to="/profile"
+                        to="/my-portfolio/profile"
                         class="dropdown-item"
                         @click="profileDropdownActive = false"
                     >
@@ -126,7 +126,7 @@ const isOutsideClicked = (event) => {
                     </router-link>
 
                     <router-link
-                        to="/settings"
+                        to="/my-portfolio/settings"
                         class="dropdown-item"
                         @click="profileDropdownActive = false"
                     >

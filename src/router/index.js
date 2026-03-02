@@ -5,65 +5,70 @@ const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
-            path: '/',
+            path: '/my-portfolio',
             component: AppLayout,
             children: [
                 // --- Dashboard
                 {
-                    path: '/',
-                    name: 'dashboard',
+                    path: '/my-portfolio',
+                    name: 'portfolio',
                     component: () => import('@/views/Dashboard.vue')
                 },
 
                 // --- Profile Pages
                 {
-                    path: '/about',
+                    path: '/my-portfolio/about',
                     name: 'about',
                     component: () => import('@/views/pages/profile/About.vue')
                 },
                 {
-                    path: '/skills',
+                    path: '/my-portfolio/skills',
                     name: 'skills',
                     component: () => import('@/views/pages/profile/Skills.vue')
                 },
                 {
-                    path: '/experience',
+                    path: '/my-portfolio/experience',
                     name: 'experience',
                     component: () => import('@/views/pages/profile/Experience.vue')
                 },
                 {
-                    path: '/education',
+                    path: '/my-portfolio/education',
                     name: 'education',
                     component: () => import('@/views/pages/profile/Education.vue')
                 },
 
                 // --- Work Pages
                 {
-                    path: '/projects',
+                    path: '/my-portfolio/projects',
                     name: 'projects',
                     component: () => import('@/views/pages/work/Projects.vue')
                 },
                 {
-                    path: '/certificates',
+                    path: '/my-portfolio/certificates',
                     name: 'certificates',
                     component: () => import('@/views/pages/work/Certificates.vue')
                 },
                 {
-                    path: '/clients',
+                    path: '/my-portfolio/clients',
                     name: 'clients',
                     component: () => import('@/views/pages/work/Clients.vue')
                 },
 
                 // --- Contact Pages
                 {
-                    path: '/contact',
+                    path: '/my-portfolio/contact',
                     name: 'contact',
                     component: () => import('@/views/pages/contact/Contact.vue')
                 },
                 {
-                    path: '/social',
+                    path: '/my-portfolio/social',
                     name: 'social',
                     component: () => import('@/views/pages/contact/Social.vue')
+                },
+                {
+                    path: '/my-portfolio/profile',
+                    name: 'profile',
+                    component: () => import('@/views/pages/profile/CompleteProfile.vue')
                 },
 
                 // --- Settings

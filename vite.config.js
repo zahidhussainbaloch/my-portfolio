@@ -5,9 +5,8 @@ import vue from '@vitejs/plugin-vue';
 export default defineConfig({
     plugins: [vue()],
 
-    // 🔥 IMPORTANT FOR GITHUB PAGES
-    base: '/my-portfolio/', // 👈 Your repo name here
-
+    // base: '/my-portfolio/',
+    base: '/my-portfolio/',
     resolve: {
         alias: {
             '@': fileURLToPath(new URL('./src', import.meta.url))

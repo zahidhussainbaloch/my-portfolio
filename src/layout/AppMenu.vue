@@ -5,31 +5,31 @@ import AppMenuItem from './AppMenuItem.vue';
 const model = ref([
     {
         items: [
-            { label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }
+            { label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/my-portfolio' }
         ]
     },
     {
         label: 'Profile',
         items: [
-            { label: 'About Me', icon: 'pi pi-fw pi-user', to: '/about' },
-            { label: 'Skills', icon: 'pi pi-fw pi-code', to: '/skills' },
-            { label: 'Experience', icon: 'pi pi-fw pi-briefcase', to: '/experience' },
-            { label: 'Education', icon: 'pi pi-fw pi-book', to: '/education' }
+            { label: 'About Me', icon: 'pi pi-fw pi-user', to: '/my-portfolio/about' },
+            { label: 'Skills', icon: 'pi pi-fw pi-code', to: '/my-portfolio/skills' },
+            { label: 'Experience', icon: 'pi pi-fw pi-briefcase', to: '/my-portfolio/experience' },
+            { label: 'Education', icon: 'pi pi-fw pi-book', to: '/my-portfolio/education' }
         ]
     },
     {
         label: 'Work',
         items: [
-            { label: 'Projects', icon: 'pi pi-fw pi-folder', to: '/projects' },
-            { label: 'Certificates', icon: 'pi pi-fw pi-verified', to: '/certificates' },
-            { label: 'Clients', icon: 'pi pi-fw pi-users', to: '/clients' }
+            { label: 'Projects', icon: 'pi pi-fw pi-folder', to: '/my-portfolio/projects' },
+            { label: 'Certificates', icon: 'pi pi-fw pi-verified', to: '/my-portfolio/certificates' },
+            { label: 'Clients', icon: 'pi pi-fw pi-users', to: '/my-portfolio/clients' }
         ]
     },
     {
         label: 'Contact',
         items: [
-            { label: 'Contact Info', icon: 'pi pi-fw pi-envelope', to: '/contact' },
-            { label: 'Social Links', icon: 'pi pi-fw pi-share-alt', to: '/social' }
+            { label: 'Contact Info', icon: 'pi pi-fw pi-envelope', to: '/my-portfolio/contact' },
+            { label: 'Social Links', icon: 'pi pi-fw pi-share-alt', to: '/my-portfolio/social' }
         ]
     },
     {
