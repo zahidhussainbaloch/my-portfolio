@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "name": "Tech Solutions Pvt Ltd",
+      "industry": "Software Development",
+      "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/microsoft.svg"
+    },
+    {
+      "name": "Web Creators Inc",
+      "industry": "Web Design",
+      "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/google.svg"
+    },
+    {
+      "name": "Code Labs",
+      "industry": "IT Consulting",
+      "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg"
+    },
+    {
+      "name": "InnovateX",
+      "industry": "Startups",
+      "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/airbnb.svg"
+    }
+  ]
+}

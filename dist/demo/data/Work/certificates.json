@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "title": "Full Stack Web Development",
+      "issuer": "Coursera",
+      "year": "2022",
+      "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/coursera.svg"
+    },
+    {
+      "title": "Vue.js Essentials",
+      "issuer": "Udemy",
+      "year": "2021",
+      "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/udemy.svg"
+    },
+    {
+      "title": "Laravel Advanced",
+      "issuer": "LinkedIn Learning",
+      "year": "2021",
+      "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg"
+    },
+    {
+      "title": "Database Management Systems",
+      "issuer": "edX",
+      "year": "2020",
+      "logo": "https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/edx.svg"
+    }
+  ]
+}

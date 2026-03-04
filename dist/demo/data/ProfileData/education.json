@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "degree": "BSc in Computer Science",
+      "institute": "University of Karachi",
+      "year": "2015 - 2019",
+      "logo": "https://ui-avatars.com/api/?name=University+of+Karachi&background=0f172a&color=ffffff&size=200"
+    },
+    {
+      "degree": "Intermediate (Pre-Engineering)",
+      "institute": "Board of Intermediate Education Karachi",
+      "year": "2013 - 2015",
+      "logo": "https://ui-avatars.com/api/?name=BIEK&background=1e40af&color=ffffff&size=200"
+    },
+    {
+      "degree": "Matriculation (Science)",
+      "institute": "Board of Secondary Education Karachi",
+      "year": "2011 - 2013",
+      "logo": "https://ui-avatars.com/api/?name=BSEK&background=059669&color=ffffff&size=200"
+    }
+  ]
+}
