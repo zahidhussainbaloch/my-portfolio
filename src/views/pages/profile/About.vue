@@ -1,127 +1,139 @@
 <template>
-  <div class="card about-card">
-    <!-- Header with profile image and name -->
-    <div class="about-header">
-      <img :src="about.profileImage || ''" :alt="about.name || ''" class="profile-img" />
-      <div class="header-text">
-        <h2>{{ about.name || 'Your Name' }}</h2>
-        <h4>{{ about.title || 'Your Title' }}</h4>
+  <div class="profile-wrapper" v-if="profile">
+
+    <div class="profile-card">
+      <h1>{{ profile.name }}</h1>
+      <h3>{{ profile.title }}</h3>
+
+      <div class="contact">
+        <p><strong>Email:</strong> {{ profile.email }}</p>
+        <p><strong>Phone:</strong> {{ profile.phone }}</p>
+        <p><strong>Location:</strong> {{ profile.location }}</p>
+        <!-- <p><strong>CV File:</strong> {{ profile.cvFile }}</p> -->
       </div>
+
+      <p class="summary">
+        {{ profile.summary }}
+      </p>
+
+      <h2>Skills</h2>
+      <div class="skills">
+        <span v-for="(skill, index) in profile.skills" :key="index">
+          {{ skill }}
+        </span>
+      </div>
+
+      <!-- CV Section -->
+      <h2>My Complete CV</h2>
+
+      <div class="cv-section">
+        <iframe
+          v-if="profile.cvFile"
+          :src="cvUrl"
+          width="100%"
+          height="600px"
+        ></iframe>
+
+        <a
+          v-if="profile.cvFile"
+          :href="cvUrl"
+          download
+          class="download-btn"
+        >
+          Download CV
+        </a>
+      </div>
+
     </div>
 
-    <!-- Description -->
-    <p class="about-description">{{ about.description || 'Your description goes here...' }}</p>
-
-    <!-- Expertise -->
-    <h3>Expertise</h3>
-    <div class="expertise-grid">
-      <div
-        v-for="(item, index) in about.expertise || []"
-        :key="index"
-        class="expertise-item"
-      >
-        {{ item }}
-      </div>
-    </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
-import AboutService from '../../../service/ProfileServices/AboutService.js';
+import { ref, onMounted, computed } from 'vue';
+import CompleteProfileService from '@/service/ProfileServices/CompleteProfileService.js';
 
-const about = ref({
-  name: '',
-  title: '',
-  description: '',
-  expertise: [],
-  profileImage: ''
-});
-
-const aboutService = new AboutService();
+const profile = ref(null);
+const service = new CompleteProfileService();
 
 onMounted(async () => {
-  const data = await aboutService.getAbout();
-  if (data) about.value = data; // safely update
+  const data = await service.getCompleteProfile();
+  if (data) profile.value = data;
+});
+
+const cvUrl = computed(() => {
+  if (!profile.value?.cvFile) return '';
+  return `${import.meta.env.BASE_URL}${profile.value.cvFile}`;
 });
 </script>
 
 <style scoped>
-.card.about-card {
-  padding: 2rem;
-  background: linear-gradient(135deg, #ffffff 0%, #f0f4f8 100%);
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-  max-width: 900px;
-  margin: 2rem auto;
-  transition: transform 0.3s;
-}
-
-.card.about-card:hover {
-  transform: translateY(-5px);
-}
-
-/* Header layout */
-.about-header {
+.profile-wrapper {
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  justify-content: center;
+  padding: 2rem;
 }
 
-.profile-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #1e88e5;
-  transition: transform 0.3s;
+.profile-card {
+  max-width: 900px;
+  width: 100%;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-.profile-img:hover {
-  transform: scale(1.05);
-}
-
-.header-text h2 {
-  margin: 0;
-  font-size: 1.8rem;
+h1 {
   color: #1e88e5;
+  margin-bottom: 0;
 }
 
-.header-text h4 {
-  margin: 0;
+h3 {
+  margin-top: 5px;
   color: #555;
-  font-weight: 500;
 }
 
-/* Description */
-.about-description {
-  font-size: 1rem;
+.contact p {
+  margin: 5px 0;
+}
+
+.summary {
+  margin: 1.5rem 0;
   line-height: 1.8;
-  color: #333;
-  margin-bottom: 1.5rem;
+  color: #444;
 }
 
-/* Expertise grid */
-.expertise-grid {
+.skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 10px;
+  margin-bottom: 2rem;
 }
 
-.expertise-item {
+.skills span {
   background: #1e88e5;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 12px;
-  font-weight: 500;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s, background 0.3s;
-  cursor: default;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
 }
 
-.expertise-item:hover {
-  transform: translateY(-3px);
+.cv-section {
+  margin-top: 1.5rem;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 12px 24px;
+  background: #1e88e5;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
   background: #1565c0;
 }
 </style>

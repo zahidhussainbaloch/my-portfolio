@@ -1,16 +1,22 @@
 {
   "data": {
     "name": "Zahid Hussain",
-    "title": "Full Stack Developer",
-    "description": "I am a passionate Full Stack Developer with experience in building scalable web applications. I love creating modern, responsive, and user-friendly interfaces.",
-    "expertise": [
-      "Laravel",
+    "title": "Software Developer",
+    "email": "zahidhussainzh065@gmail.com",
+    "phone": "+923103833365",
+    "location": "Karachi, Sindh, Pakistan",
+    "summary": "Experienced Software Engineer with 2.8+ years of experience in Laravel, Vue.js, React, Node.js and REST APIs. Strong background in building scalable backend systems and modern frontend applications.",
+    "skills": [
+      "PHP (Core & Laravel)",
       "Vue.js",
+      "React.js",
       "Node.js",
-      "MySQL",
-      "HTML5, CSS3, JavaScript",
-      "REST APIs & GraphQL"
+      "MySQL & SQL Server",
+      "MongoDB & Firebase",
+      "REST APIs",
+      "WebSocket.io",
+      "Bootstrap & TailwindCSS"
     ],
-    "profileImage": "https://via.placeholder.com/150?text=Zahid+Hussain"
+     "cvFile": "cv/zahid-hussain-2025.pdf"
   }
 }

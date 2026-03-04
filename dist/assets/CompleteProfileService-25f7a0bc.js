@@ -1,0 +1,1 @@
+class t{async getCompleteProfile(){try{const o=await fetch("../../../public/demo/data/ProfileData/completeprofile.json");if(!o.ok)throw new Error("Failed to load profile data");return(await o.json()).data}catch(o){return console.error("Profile loading error:",o),null}}}export{t as C};
